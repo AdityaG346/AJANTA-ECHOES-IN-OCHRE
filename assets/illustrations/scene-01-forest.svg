@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+      
+    <defs>
+      <!-- Base Gradients -->
+      <radialGradient id="cave-bg" cx="50%" cy="45%" r="75%">
+        <stop offset="0%" stop-color="#241B15"/>
+        <stop offset="60%" stop-color="#18130F"/>
+        <stop offset="100%" stop-color="#0E0B08"/>
+      </radialGradient>
+      <radialGradient id="palace-bg" cx="50%" cy="40%" r="70%">
+        <stop offset="0%" stop-color="#362217"/>
+        <stop offset="60%" stop-color="#22160F"/>
+        <stop offset="100%" stop-color="#120C08"/>
+      </radialGradient>
+      <radialGradient id="dawn-bg" cx="50%" cy="40%" r="75%">
+        <stop offset="0%" stop-color="#4A311D"/>
+        <stop offset="45%" stop-color="#2D1C12"/>
+        <stop offset="100%" stop-color="#140E0A"/>
+      </radialGradient>
+
+      <!-- White Elephant Bodhisattva Gradient -->
+      <linearGradient id="white-elephant-body" x1="0.2" y1="0" x2="0.8" y2="1">
+        <stop offset="0%" stop-color="#FAF5EC"/>
+        <stop offset="40%" stop-color="#ECE0CD"/>
+        <stop offset="75%" stop-color="#D0BC9E"/>
+        <stop offset="100%" stop-color="#9C8065"/>
+      </linearGradient>
+
+      <linearGradient id="white-elephant-highlight" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.8"/>
+        <stop offset="100%" stop-color="#E2D0B6" stop-opacity="0.2"/>
+      </linearGradient>
+
+      <!-- Blind Parents Gray/Umber Gradient -->
+      <linearGradient id="parent-elephant-grad" x1="0.2" y1="0" x2="0.8" y2="1">
+        <stop offset="0%" stop-color="#7A685B"/>
+        <stop offset="50%" stop-color="#58483D"/>
+        <stop offset="100%" stop-color="#382C23"/>
+      </linearGradient>
+
+      <!-- Ancient Bent Sal Tree Trunk Gradient -->
+      <linearGradient id="tree-bark" x1="0" y1="0" x2="1" y2="0.2">
+        <stop offset="0%" stop-color="#271911"/>
+        <stop offset="35%" stop-color="#432F23"/>
+        <stop offset="70%" stop-color="#563E30"/>
+        <stop offset="100%" stop-color="#1E130D"/>
+      </linearGradient>
+
+      <!-- Mineral Pigment Shading -->
+      <linearGradient id="ochre-gold" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#E5B456"/>
+        <stop offset="100%" stop-color="#9E6E20"/>
+      </linearGradient>
+      <linearGradient id="terracotta-red" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#C25A39"/>
+        <stop offset="100%" stop-color="#6F2815"/>
+      </linearGradient>
+
+      <!-- Plaster Stipple Texture Pattern -->
+      <pattern id="plaster-grain" width="100" height="100" patternUnits="userSpaceOnUse">
+        <circle cx="15" cy="15" r="1" fill="#C99A43" opacity="0.12"/>
+        <circle cx="65" cy="35" r="1.5" fill="#E6D2AD" opacity="0.08"/>
+        <circle cx="40" cy="75" r="1" fill="#A84F32" opacity="0.1"/>
+        <circle cx="85" cy="85" r="1.2" fill="#C99A43" opacity="0.12"/>
+      </pattern>
+    </defs>
+    
+      <!-- Background -->
+      <rect width="1200" height="800" fill="url(#cave-bg)"/>
+      <rect width="1200" height="800" fill="url(#plaster-grain)"/>
+
+      <!-- Distant Ajanta Cliff Rocks -->
+      <path d="M0,520 Q240,430 480,480 T960,450 Q1100,470 1200,440 L1200,800 L0,800 Z" fill="#1C1510" opacity="0.9"/>
+      <path d="M0,570 Q200,510 400,540 T880,520 L1200,500 L1200,800 L0,800 Z" fill="#251B14" opacity="0.95"/>
+
+      <!-- The Recurring Ancient Bent Sal Tree (Left Anchor) -->
+      <!-- Massive Gnarled Trunk with distinct arch curving inward -->
+      <path d="M60,800 C75,660 55,530 110,410 C145,330 210,280 290,230 C380,180 500,200 610,170 C600,195 540,225 450,245 C370,265 295,315 250,385 C205,470 215,630 220,800 Z" fill="url(#tree-bark)"/>
+      <path d="M210,340 C270,305 365,295 425,260 C410,278 355,320 300,342 Z" fill="#38261C"/>
+      <path d="M125,430 C70,390 10,380 -30,390 C-20,375 40,370 100,405 Z" fill="#38261C"/>
+
+      <!-- Stylized Tiered Canopy (Ajanta Lotus-Leaf Clustered Foliage) -->
+      <g fill="#455437" stroke="#25301D" stroke-width="2">
+        <ellipse cx="320" cy="190" rx="95" ry="50"/>
+        <ellipse cx="450" cy="165" rx="115" ry="60"/>
+        <ellipse cx="570" cy="155" rx="85" ry="45"/>
+        <ellipse cx="240" cy="235" rx="85" ry="48"/>
+        <ellipse cx="370" cy="225" rx="100" ry="52"/>
+      </g>
+      <g fill="#617051" stroke="#37452A" stroke-width="1.5">
+        <ellipse cx="340" cy="175" rx="75" ry="38"/>
+        <ellipse cx="465" cy="150" rx="90" ry="42"/>
+        <ellipse cx="550" cy="145" rx="65" ry="32"/>
+        <ellipse cx="260" cy="220" rx="65" ry="34"/>
+      </g>
+      <!-- Hanging forest creepers and ochre berries -->
+      <path d="M300,230 Q325,340 295,410" stroke="#68765A" stroke-width="3" fill="none"/>
+      <path d="M430,210 Q455,330 435,395" stroke="#68765A" stroke-width="2.5" fill="none"/>
+      <circle cx="295" cy="415" r="7" fill="#A96F66"/>
+      <circle cx="435" cy="400" r="6" fill="#C99A43"/>
+
+      <!-- Two Blind Elderly Parents (Resting close together in devotion, right side) -->
+      <g id="scene1-parents" transform="translate(560, 370)">
+        <!-- Mother (Behind) -->
+        <path d="M150,260 C130,200 170,130 230,105 C300,75 380,85 430,125 C480,165 490,240 480,300 L430,300 C420,230 370,175 310,175 C250,175 190,215 170,280 Z" fill="url(#parent-elephant-grad)"/>
+        <!-- Mother's head and gentle closed eye -->
+        <circle cx="360" cy="135" r="45" fill="#4B3A30"/>
+        <path d="M345,138 Q360,132 375,140" stroke="#2B1F17" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+        <path d="M380,140 Q415,175 425,220" stroke="#362921" stroke-width="12" stroke-linecap="round" fill="none"/>
+
+        <!-- Father (Foreground resting) -->
+        <path d="M70,320 C50,250 80,180 140,140 C220,95 330,100 390,150 C430,195 450,270 440,335 C350,345 200,345 70,320 Z" fill="url(#parent-elephant-grad)"/>
+        <ellipse cx="170" cy="335" rx="90" ry="35" fill="#392C23"/>
+        <ellipse cx="320" cy="340" rx="80" ry="30" fill="#2E221A"/>
+
+        <!-- Father's Head with Venerable Wrinkles -->
+        <circle cx="130" cy="180" r="65" fill="#584639"/>
+        <path d="M95,150 Q130,140 165,155" stroke="#362920" stroke-width="2.5" fill="none"/>
+        <path d="M90,165 Q125,155 160,170" stroke="#362920" stroke-width="2" fill="none"/>
+        <!-- Peaceful curved closed blind eye -->
+        <path d="M115,185 Q135,177 155,188" stroke="#201610" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+        <!-- Soft drooping ear -->
+        <path d="M165,150 C205,160 225,220 205,260 C185,290 155,280 145,250 Z" fill="#48382E" stroke="#30231B" stroke-width="2"/>
+        <!-- Curled trunk reaching warmly toward offering -->
+        <path d="M90,200 C60,240 35,270 15,258 C0,246 12,218 35,208" stroke="#48382E" stroke-width="18" stroke-linecap="round" fill="none"/>
+      </g>
+
+      <!-- The Bodhisattva White Elephant (Active, Majestic, Offering Foliage) -->
+      <g id="scene1-white-elephant" transform="translate(190, 245)">
+        <!-- Robust, Luminous Ivory Body -->
+        <path d="M180,260 C160,180 220,115 310,105 C410,95 480,135 510,215 C530,275 510,375 470,425 L390,425 C400,345 390,305 330,295 C270,285 210,325 190,425 L120,425 C110,355 130,295 180,260 Z" fill="url(#white-elephant-body)"/>
+
+        <!-- Sturdy Classical Legs -->
+        <path d="M300,310 L320,475 L380,475 L370,310 Z" fill="#C2AC90" stroke="#7A6046" stroke-width="2"/>
+        <path d="M220,320 L230,475 L290,475 L280,320 Z" fill="#DCBDA1" stroke="#7A6046" stroke-width="2"/>
+        <path d="M430,320 L440,475 L490,475 L480,320 Z" fill="#B29C80" stroke="#7A6046" stroke-width="2"/>
+
+        <!-- Classical Ajanta Forehead Dome (Kumbha) -->
+        <path d="M160,190 C140,125 185,65 255,65 C305,65 335,105 325,165 C305,205 255,235 205,225 Z" fill="url(#white-elephant-body)" stroke="#8C6A4B" stroke-width="2.5"/>
+
+        <!-- Graceful Flared Royal Ear with Terracotta Accent -->
+        <path d="M255,105 C305,115 340,175 320,240 C300,285 255,280 240,235 Z" fill="#D5C2A9" stroke="#8C6A4B" stroke-width="2.5"/>
+        <path d="M265,130 C295,145 310,185 295,225" stroke="#A96F66" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.45"/>
+
+        <!-- Lotus Petal Eye (Gentle, Radiant, Aware) -->
+        <ellipse cx="208" cy="145" rx="14" ry="8" fill="#FFF9F0" stroke="#4A3528" stroke-width="2"/>
+        <circle cx="210" cy="145" r="5" fill="#241B14"/>
+        <circle cx="212" cy="143" r="1.5" fill="#FFFFFF"/>
+        <path d="M192,136 Q208,128 228,137" stroke="#A84F32" stroke-width="2.5" fill="none"/>
+
+        <!-- Polished Curved Ivory Tusk -->
+        <path d="M160,205 C130,235 90,245 70,230 C65,225 75,210 115,195 C140,185 160,190 160,205 Z" fill="#FFFDF5" stroke="#BAAA90" stroke-width="2"/>
+
+        <!-- Reaching Tender Trunk with Forest Shoots -->
+        <path d="M170,205 C150,265 170,335 250,365 C320,390 390,375 425,335" stroke="url(#white-elephant-body)" stroke-width="32" stroke-linecap="round" fill="none"/>
+        <path d="M170,205 C150,265 170,335 250,365 C320,390 390,375 425,335" stroke="#7A6046" stroke-width="2" fill="none"/>
+
+        <!-- Forest Greens, Lotus Stalks and Wild Fig in Trunk -->
+        <g transform="translate(415, 310)">
+          <path d="M0,10 C10,-15 35,-15 45,10 C25,25 15,20 0,10 Z" fill="#A96F66" stroke="#69352E" stroke-width="1.5"/>
+          <path d="M10,8 C20,-8 30,-8 35,8 Z" fill="#C99A43"/>
+          <path d="M-10,25 C-5,-5 20,0 25,20 Z" fill="#68765A" stroke="#3D4933" stroke-width="1.5"/>
+          <path d="M20,20 C35,5 55,15 45,35 Z" fill="#4C5B3E" stroke="#26311D" stroke-width="1.5"/>
+        </g>
+      </g>
+
+      <!-- Forest Floor & Still Mountain Water Pool -->
+      <path d="M0,720 Q300,680 600,710 T1200,690 L1200,800 L0,800 Z" fill="#17120D"/>
+      <ellipse cx="520" cy="755" rx="180" ry="35" fill="#111610" stroke="#2A3826" stroke-width="1.5"/>
+      <ellipse cx="470" cy="750" rx="35" ry="10" fill="#3D5034"/>
+      <ellipse cx="560" cy="760" rx="45" ry="12" fill="#32422B"/>
+      <circle cx="520" cy="745" r="7" fill="#A96F66"/>
+
+      <!-- Refined Mineral Framing Borders -->
+      <rect x="16" y="16" width="1168" height="768" rx="4" fill="none" stroke="#C99A43" stroke-width="1.5" stroke-opacity="0.4"/>
+      <rect x="24" y="24" width="1152" height="752" rx="2" fill="none" stroke="#A84F32" stroke-width="0.75" stroke-opacity="0.3"/>
+    </svg>

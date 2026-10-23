@@ -1,0 +1,99 @@
+/* ==========================================================================
+   AJANTA: ECHOES IN OCHRE — PURPOSEFUL MOTION & TRANSITIONS
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Progressive Enhancement Reveal States
+   By default, all elements are fully visible so if JS is disabled or fails,
+   the complete site is perfectly readable and accessible.
+   -------------------------------------------------------------------------- */
+
+/* Active only after JS initializes animation readiness */
+.js-motion-ready .reveal-item {
+  opacity: 0;
+  transform: translateY(22px);
+  will-change: opacity, transform;
+}
+
+.js-motion-ready .reveal-item.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Stagger delay helpers for fallback or CSS reveals */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+
+/* --------------------------------------------------------------------------
+   Subtle Micro-Animations
+   -------------------------------------------------------------------------- */
+@keyframes subtlePulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+.scene-dot {
+  animation: subtlePulse 2.8s ease-in-out infinite;
+}
+
+/* Scroll indicator bounce */
+@keyframes arrowNudge {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+}
+
+.btn-primary .btn-icon {
+  animation: arrowNudge 2.2s ease-in-out infinite;
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Drawer Transition
+   -------------------------------------------------------------------------- */
+.primary-nav {
+  transition: transform var(--transition-normal), opacity var(--transition-normal);
+}
+
+/* --------------------------------------------------------------------------
+   Reduced Motion Overrides (Mandatory Non-Negotiable)
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .js-motion-ready .reveal-item {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .artwork-img {
+    transition: none !important;
+    transform: none !important;
+  }
+
+  .btn-primary .btn-icon,
+  .scene-dot {
+    animation: none !important;
+  }
+}

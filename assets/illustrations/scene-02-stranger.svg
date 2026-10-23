@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+      
+    <defs>
+      <!-- Base Gradients -->
+      <radialGradient id="cave-bg" cx="50%" cy="45%" r="75%">
+        <stop offset="0%" stop-color="#241B15"/>
+        <stop offset="60%" stop-color="#18130F"/>
+        <stop offset="100%" stop-color="#0E0B08"/>
+      </radialGradient>
+      <radialGradient id="palace-bg" cx="50%" cy="40%" r="70%">
+        <stop offset="0%" stop-color="#362217"/>
+        <stop offset="60%" stop-color="#22160F"/>
+        <stop offset="100%" stop-color="#120C08"/>
+      </radialGradient>
+      <radialGradient id="dawn-bg" cx="50%" cy="40%" r="75%">
+        <stop offset="0%" stop-color="#4A311D"/>
+        <stop offset="45%" stop-color="#2D1C12"/>
+        <stop offset="100%" stop-color="#140E0A"/>
+      </radialGradient>
+
+      <!-- White Elephant Bodhisattva Gradient -->
+      <linearGradient id="white-elephant-body" x1="0.2" y1="0" x2="0.8" y2="1">
+        <stop offset="0%" stop-color="#FAF5EC"/>
+        <stop offset="40%" stop-color="#ECE0CD"/>
+        <stop offset="75%" stop-color="#D0BC9E"/>
+        <stop offset="100%" stop-color="#9C8065"/>
+      </linearGradient>
+
+      <linearGradient id="white-elephant-highlight" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.8"/>
+        <stop offset="100%" stop-color="#E2D0B6" stop-opacity="0.2"/>
+      </linearGradient>
+
+      <!-- Blind Parents Gray/Umber Gradient -->
+      <linearGradient id="parent-elephant-grad" x1="0.2" y1="0" x2="0.8" y2="1">
+        <stop offset="0%" stop-color="#7A685B"/>
+        <stop offset="50%" stop-color="#58483D"/>
+        <stop offset="100%" stop-color="#382C23"/>
+      </linearGradient>
+
+      <!-- Ancient Bent Sal Tree Trunk Gradient -->
+      <linearGradient id="tree-bark" x1="0" y1="0" x2="1" y2="0.2">
+        <stop offset="0%" stop-color="#271911"/>
+        <stop offset="35%" stop-color="#432F23"/>
+        <stop offset="70%" stop-color="#563E30"/>
+        <stop offset="100%" stop-color="#1E130D"/>
+      </linearGradient>
+
+      <!-- Mineral Pigment Shading -->
+      <linearGradient id="ochre-gold" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#E5B456"/>
+        <stop offset="100%" stop-color="#9E6E20"/>
+      </linearGradient>
+      <linearGradient id="terracotta-red" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#C25A39"/>
+        <stop offset="100%" stop-color="#6F2815"/>
+      </linearGradient>
+
+      <!-- Plaster Stipple Texture Pattern -->
+      <pattern id="plaster-grain" width="100" height="100" patternUnits="userSpaceOnUse">
+        <circle cx="15" cy="15" r="1" fill="#C99A43" opacity="0.12"/>
+        <circle cx="65" cy="35" r="1.5" fill="#E6D2AD" opacity="0.08"/>
+        <circle cx="40" cy="75" r="1" fill="#A84F32" opacity="0.1"/>
+        <circle cx="85" cy="85" r="1.2" fill="#C99A43" opacity="0.12"/>
+      </pattern>
+    </defs>
+    
+      <!-- Background Base -->
+      <rect width="1200" height="800" fill="url(#cave-bg)"/>
+      <rect width="1200" height="800" fill="url(#plaster-grain)"/>
+
+      <!-- Distant Sunlit Clearing Breakout -->
+      <path d="M750,150 Q920,100 1150,160 L1200,480 L700,450 Z" fill="#4A341E" opacity="0.35"/>
+      <circle cx="950" cy="220" r="140" fill="#C99A43" opacity="0.12"/>
+
+      <!-- Rugged Forest Mountains and Crags -->
+      <path d="M0,450 Q280,360 560,420 T1200,380 L1200,800 L0,800 Z" fill="#1E1611"/>
+      <path d="M0,520 Q320,460 640,510 T1200,470 L1200,800 L0,800 Z" fill="#291E16"/>
+
+      <!-- Winding Rocky Forest Path -->
+      <path d="M120,800 C180,680 280,620 440,590 C620,560 760,490 920,420 C1040,360 1120,320 1200,300 L1200,420 C1100,450 980,510 820,580 C680,640 540,680 420,800 Z" fill="#3D2C1E" stroke="#5B4330" stroke-width="1.5"/>
+
+      <!-- Dense Forest Plant Clusters & Trees -->
+      <g fill="#37452B" stroke="#222B1B" stroke-width="1.5">
+        <ellipse cx="140" cy="380" rx="100" ry="60"/>
+        <ellipse cx="250" cy="350" rx="90" ry="50"/>
+        <ellipse cx="80" cy="440" rx="85" ry="45"/>
+        <ellipse cx="780" cy="340" rx="90" ry="45"/>
+        <ellipse cx="900" cy="310" rx="110" ry="55"/>
+      </g>
+      <g fill="#576847" stroke="#37452B" stroke-width="1.5">
+        <ellipse cx="160" cy="365" rx="75" ry="40"/>
+        <ellipse cx="265" cy="335" rx="70" ry="38"/>
+        <ellipse cx="800" cy="325" rx="70" ry="35"/>
+      </g>
+
+      <!-- The Bodhisattva White Elephant Guiding the Way (Left Center) -->
+      <g id="scene2-elephant" transform="translate(140, 210)">
+        <!-- Majestic Ivory Body Oriented Forward Right -->
+        <path d="M160,260 C140,180 200,115 290,105 C390,95 460,135 490,215 C510,275 490,375 450,425 L370,425 C380,345 370,305 310,295 C250,285 190,325 170,425 L100,425 C90,355 110,295 160,260 Z" fill="url(#white-elephant-body)"/>
+
+        <!-- Legs Standing Forward on Path -->
+        <path d="M280,310 L300,475 L360,475 L350,310 Z" fill="#C2AC90" stroke="#7A6046" stroke-width="2"/>
+        <path d="M200,320 L210,475 L270,475 L260,320 Z" fill="#DCBDA1" stroke="#7A6046" stroke-width="2"/>
+        <path d="M410,320 L420,475 L470,475 L460,320 Z" fill="#B29C80" stroke="#7A6046" stroke-width="2"/>
+
+        <!-- Noble Head & Arched Ear -->
+        <path d="M280,180 C260,115 305,55 375,55 C425,55 455,95 445,155 C425,195 375,225 325,215 Z" fill="url(#white-elephant-body)" stroke="#8C6A4B" stroke-width="2.5"/>
+        <path d="M320,105 C370,115 405,175 385,240 C365,285 320,280 305,235 Z" fill="#D5C2A9" stroke="#8C6A4B" stroke-width="2.5"/>
+
+        <!-- Kind Almond Eye looking gently at Traveller -->
+        <ellipse cx="370" cy="135" rx="13" ry="7.5" fill="#FFF9F0" stroke="#4A3528" stroke-width="2"/>
+        <circle cx="372" cy="135" r="4.5" fill="#241B14"/>
+        <circle cx="374" cy="133" r="1.5" fill="#FFFFFF"/>
+        <path d="M355,126 Q370,118 390,127" stroke="#A84F32" stroke-width="2.5" fill="none"/>
+
+        <!-- Tusk pointing forward -->
+        <path d="M400,195 C430,225 470,230 490,215 C495,210 485,195 445,180 Z" fill="#FFFDF5" stroke="#BAAA90" stroke-width="2"/>
+
+        <!-- Extended Trunk Gracefully Indicating the Way to the Traveller -->
+        <path d="M380,195 C430,240 500,270 590,275 C640,278 690,265 720,245" stroke="url(#white-elephant-body)" stroke-width="28" stroke-linecap="round" fill="none"/>
+        <path d="M380,195 C430,240 500,270 590,275 C640,278 690,265 720,245" stroke="#7A6046" stroke-width="2" fill="none"/>
+      </g>
+
+      <!-- The Lost Traveller (Ajanta Human Figure Proportions: graceful, grateful) -->
+      <g id="scene2-traveller" transform="translate(860, 360)">
+        <!-- Exhausted but Relieved Posture, Hands Clasped in Anjali Mudra -->
+        <!-- Slender legs draped in ochre dhoti -->
+        <path d="M40,230 L30,360 L55,360 L65,230 Z" fill="#755026"/>
+        <path d="M70,230 L80,360 L105,360 L95,230 Z" fill="#916430"/>
+        <!-- Terracotta / Ochre pleated dhoti wrap -->
+        <path d="M25,140 C15,190 20,240 45,260 C65,270 95,270 115,245 C125,200 115,150 100,140 Z" fill="#C99A43" stroke="#855B18" stroke-width="2"/>
+        <path d="M50,150 Q70,210 65,260" stroke="#855B18" stroke-width="2" fill="none"/>
+        <path d="M80,150 Q90,205 95,255" stroke="#855B18" stroke-width="2" fill="none"/>
+
+        <!-- Warm Golden-Umber Skin Tone Torso (Ajanta Classical Figure) -->
+        <path d="M35,60 C25,95 20,130 30,155 C50,165 95,165 110,150 C115,125 105,90 95,60 Z" fill="#B37C50" stroke="#684223" stroke-width="2"/>
+        <!-- Slender Chest Contouring and Sacred Cord (Upavita) -->
+        <path d="M45,65 Q75,110 50,155" stroke="#E6D2AD" stroke-width="2" stroke-dasharray="4,4" fill="none"/>
+
+        <!-- Clasped Hands in Reverent Gratitude -->
+        <path d="M15,100 C-5,115 -10,130 5,140 C20,145 35,135 45,110 Z" fill="#A47047" stroke="#684223" stroke-width="1.5"/>
+        <path d="M20,95 L-5,110 L-10,125 L10,120 Z" fill="#94633B"/>
+
+        <!-- Head, Classic Ajanta Profile, Hair Tied in Topknot (Chignon) -->
+        <circle cx="65" cy="25" r="26" fill="#B37C50" stroke="#684223" stroke-width="2"/>
+        <path d="M45,20 C40,-5 65,-15 80,-5 C90,5 90,20 85,25 Z" fill="#1C140E"/>
+        <circle cx="82" cy="-2" r="10" fill="#1C140E"/>
+        <!-- Soft facial features: bowed head in thankfulness -->
+        <ellipse cx="56" cy="22" rx="4" ry="2.5" fill="#20150E"/>
+        <path d="M50,16 Q57,12 65,16" stroke="#523218" stroke-width="1.5" fill="none"/>
+        <path d="M52,32 Q62,35 68,30" stroke="#7A2D1F" stroke-width="2" fill="none"/>
+      </g>
+
+      <!-- Foreground Floral Details & Framing -->
+      <path d="M0,740 Q400,700 800,730 T1200,710 L1200,800 L0,800 Z" fill="#16110D"/>
+      <rect x="16" y="16" width="1168" height="768" rx="4" fill="none" stroke="#C99A43" stroke-width="1.5" stroke-opacity="0.4"/>
+      <rect x="24" y="24" width="1152" height="752" rx="2" fill="none" stroke="#A84F32" stroke-width="0.75" stroke-opacity="0.3"/>
+    </svg>

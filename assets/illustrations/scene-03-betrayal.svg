@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+      
+    <defs>
+      <!-- Base Gradients -->
+      <radialGradient id="cave-bg" cx="50%" cy="45%" r="75%">
+        <stop offset="0%" stop-color="#241B15"/>
+        <stop offset="60%" stop-color="#18130F"/>
+        <stop offset="100%" stop-color="#0E0B08"/>
+      </radialGradient>
+      <radialGradient id="palace-bg" cx="50%" cy="40%" r="70%">
+        <stop offset="0%" stop-color="#362217"/>
+        <stop offset="60%" stop-color="#22160F"/>
+        <stop offset="100%" stop-color="#120C08"/>
+      </radialGradient>
+      <radialGradient id="dawn-bg" cx="50%" cy="40%" r="75%">
+        <stop offset="0%" stop-color="#4A311D"/>
+        <stop offset="45%" stop-color="#2D1C12"/>
+        <stop offset="100%" stop-color="#140E0A"/>
+      </radialGradient>
+
+      <!-- White Elephant Bodhisattva Gradient -->
+      <linearGradient id="white-elephant-body" x1="0.2" y1="0" x2="0.8" y2="1">
+        <stop offset="0%" stop-color="#FAF5EC"/>
+        <stop offset="40%" stop-color="#ECE0CD"/>
+        <stop offset="75%" stop-color="#D0BC9E"/>
+        <stop offset="100%" stop-color="#9C8065"/>
+      </linearGradient>
+
+      <linearGradient id="white-elephant-highlight" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.8"/>
+        <stop offset="100%" stop-color="#E2D0B6" stop-opacity="0.2"/>
+      </linearGradient>
+
+      <!-- Blind Parents Gray/Umber Gradient -->
+      <linearGradient id="parent-elephant-grad" x1="0.2" y1="0" x2="0.8" y2="1">
+        <stop offset="0%" stop-color="#7A685B"/>
+        <stop offset="50%" stop-color="#58483D"/>
+        <stop offset="100%" stop-color="#382C23"/>
+      </linearGradient>
+
+      <!-- Ancient Bent Sal Tree Trunk Gradient -->
+      <linearGradient id="tree-bark" x1="0" y1="0" x2="1" y2="0.2">
+        <stop offset="0%" stop-color="#271911"/>
+        <stop offset="35%" stop-color="#432F23"/>
+        <stop offset="70%" stop-color="#563E30"/>
+        <stop offset="100%" stop-color="#1E130D"/>
+      </linearGradient>
+
+      <!-- Mineral Pigment Shading -->
+      <linearGradient id="ochre-gold" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#E5B456"/>
+        <stop offset="100%" stop-color="#9E6E20"/>
+      </linearGradient>
+      <linearGradient id="terracotta-red" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#C25A39"/>
+        <stop offset="100%" stop-color="#6F2815"/>
+      </linearGradient>
+
+      <!-- Plaster Stipple Texture Pattern -->
+      <pattern id="plaster-grain" width="100" height="100" patternUnits="userSpaceOnUse">
+        <circle cx="15" cy="15" r="1" fill="#C99A43" opacity="0.12"/>
+        <circle cx="65" cy="35" r="1.5" fill="#E6D2AD" opacity="0.08"/>
+        <circle cx="40" cy="75" r="1" fill="#A84F32" opacity="0.1"/>
+        <circle cx="85" cy="85" r="1.2" fill="#C99A43" opacity="0.12"/>
+      </pattern>
+    </defs>
+    
+      <!-- Moody, Stormy Umber Background -->
+      <radialGradient id="betrayal-bg" cx="45%" cy="45%" r="75%">
+        <stop offset="0%" stop-color="#2D1A12"/>
+        <stop offset="50%" stop-color="#1F120D"/>
+        <stop offset="100%" stop-color="#0E0805"/>
+      </radialGradient>
+      <rect width="1200" height="800" fill="url(#betrayal-bg)"/>
+      <rect width="1200" height="800" fill="url(#plaster-grain)"/>
+
+      <!-- Darkened Cliffs and Tangled Creepers -->
+      <path d="M0,480 Q240,400 480,450 T960,420 Q1100,440 1200,410 L1200,800 L0,800 Z" fill="#180F0A"/>
+      <path d="M0,540 Q300,480 600,530 T1200,490 L1200,800 L0,800 Z" fill="#20140D"/>
+
+      <!-- Treacherous Traveller in Left Midground Pointing Out The Elephant -->
+      <g id="scene3-betrayer" transform="translate(180, 370)">
+        <!-- Draped in darker terracotta/soiled ochre -->
+        <path d="M30,220 L20,350 L45,350 L55,220 Z" fill="#583B1B"/>
+        <path d="M60,220 L70,350 L95,350 L85,220 Z" fill="#704A23"/>
+        <path d="M15,130 C5,180 10,230 35,250 C55,260 85,260 105,235 C115,190 105,140 90,130 Z" fill="#A84F32" stroke="#5E2716" stroke-width="2"/>
+
+        <!-- Tense Torso leaning forward toward royal party -->
+        <path d="M25,50 C15,85 10,120 20,145 C40,155 85,155 100,140 C105,115 95,80 85,50 Z" fill="#A36B42" stroke="#59341B" stroke-width="2"/>
+
+        <!-- Betraying Arm Pointing Directly at the White Elephant -->
+        <path d="M85,70 L190,45 L190,65 L85,90 Z" fill="#A36B42" stroke="#59341B" stroke-width="1.5"/>
+        <circle cx="195" cy="55" r="7" fill="#8E5A35"/>
+        <path d="M195,55 L225,50" stroke="#59341B" stroke-width="3" stroke-linecap="round"/>
+
+        <!-- Face turned with guilt/greed (sharp eye, crooked brow) -->
+        <circle cx="55" cy="20" r="24" fill="#A36B42" stroke="#59341B" stroke-width="2"/>
+        <path d="M35,15 C30,-8 55,-18 70,-8 C80,2 80,18 75,22 Z" fill="#140E0A"/>
+        <ellipse cx="62" cy="18" rx="4" ry="2" fill="#1C140E"/>
+        <path d="M56,12 Q64,15 72,11" stroke="#482713" stroke-width="2" fill="none"/>
+      </g>
+
+      <!-- Royal Hunters / Attendants with Turbans and Catching Cords -->
+      <g id="scene3-royal-retinue" transform="translate(360, 330)">
+        <!-- Royal Attendant 1 (Leading the Cords) -->
+        <path d="M40,240 L35,390 L60,390 L65,240 Z" fill="#2E2016"/>
+        <path d="M70,240 L75,390 L100,390 L95,240 Z" fill="#442E20"/>
+        <!-- Draped ochre royal livery -->
+        <path d="M25,140 C15,190 20,240 45,260 C65,270 95,270 115,245 C125,200 115,150 100,140 Z" fill="#C99A43" stroke="#855B18" stroke-width="2"/>
+        <path d="M35,60 C25,95 20,130 30,155 C50,165 95,165 110,150 C115,125 105,90 95,60 Z" fill="#99663E" stroke="#58351B" stroke-width="2"/>
+        <!-- Elaborate Ajanta Turban (Ushnisha wrap) with crest ornament -->
+        <circle cx="65" cy="25" r="26" fill="#99663E"/>
+        <ellipse cx="65" cy="10" rx="30" ry="18" fill="#A84F32" stroke="#5C2515" stroke-width="2"/>
+        <circle cx="65" cy="-2" r="7" fill="#E5B456"/>
+
+        <!-- Attendant holding ceremonial golden-ochre capture ropes -->
+        <path d="M85,100 L140,120" stroke="#99663E" stroke-width="8" stroke-linecap="round"/>
+        <path d="M140,120 C220,140 320,180 420,240" stroke="#C99A43" stroke-width="5" stroke-dasharray="6,4" fill="none"/>
+      </g>
+
+      <!-- The Captive Bodhisattva White Elephant (Facing Right, Head Turned Back in Deep Sorrow) -->
+      <g id="scene3-captive-elephant" transform="translate(620, 220)">
+        <!-- Massive ivory body caught in royal harness cords -->
+        <path d="M180,260 C160,180 220,115 310,105 C410,95 480,135 510,215 C530,275 510,375 470,425 L390,425 C400,345 390,305 330,295 C270,285 210,325 190,425 L120,425 C110,355 130,295 180,260 Z" fill="url(#white-elephant-body)"/>
+
+        <!-- Legs with restrained step -->
+        <path d="M300,310 L320,475 L380,475 L370,310 Z" fill="#C2AC90" stroke="#7A6046" stroke-width="2"/>
+        <path d="M220,320 L230,475 L290,475 L280,320 Z" fill="#DCBDA1" stroke="#7A6046" stroke-width="2"/>
+        <path d="M430,320 L440,475 L490,475 L480,320 Z" fill="#B29C80" stroke="#7A6046" stroke-width="2"/>
+
+        <!-- Royal Golden-Ochre Capture Cords Draped Across Body -->
+        <path d="M150,230 C240,260 380,270 490,260" stroke="#C99A43" stroke-width="4.5" fill="none"/>
+        <path d="M200,160 C260,250 310,350 330,430" stroke="#C99A43" stroke-width="4" fill="none"/>
+
+        <!-- Head Turned Back Towards the Forest (Looking Back Left) -->
+        <path d="M170,180 C150,115 195,55 265,55 C315,55 345,95 335,155 C315,195 265,225 215,215 Z" fill="url(#white-elephant-body)" stroke="#8C6A4B" stroke-width="2.5"/>
+        <path d="M245,105 C295,115 330,175 310,240 C290,285 245,280 230,235 Z" fill="#D5C2A9" stroke="#8C6A4B" stroke-width="2.5"/>
+
+        <!-- Heartbroken, Grieving Almond Eye (Tears of Sorrow for Blind Parents) -->
+        <ellipse cx="205" cy="138" rx="14" ry="8" fill="#FFF9F0" stroke="#4A3528" stroke-width="2"/>
+        <circle cx="204" cy="138" r="5" fill="#241B14"/>
+        <circle cx="202" cy="136" r="1.5" fill="#FFFFFF"/>
+        <!-- Curved downcast eyelid -->
+        <path d="M190,132 Q205,124 225,134" stroke="#A84F32" stroke-width="2.5" fill="none"/>
+        <!-- Glistening tear line -->
+        <path d="M204,146 Q200,165 198,180" stroke="#E6D2AD" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+
+        <!-- Downcast Trunk Drooping in Grief -->
+        <path d="M180,200 C150,260 145,340 160,410 C165,430 180,440 195,435" stroke="url(#white-elephant-body)" stroke-width="30" stroke-linecap="round" fill="none"/>
+        <path d="M180,200 C150,260 145,340 160,410 C165,430 180,440 195,435" stroke="#7A6046" stroke-width="2" fill="none"/>
+      </g>
+
+      <!-- Framing Borders -->
+      <rect x="16" y="16" width="1168" height="768" rx="4" fill="none" stroke="#C99A43" stroke-width="1.5" stroke-opacity="0.4"/>
+      <rect x="24" y="24" width="1152" height="752" rx="2" fill="none" stroke="#A84F32" stroke-width="0.75" stroke-opacity="0.3"/>
+    </svg>

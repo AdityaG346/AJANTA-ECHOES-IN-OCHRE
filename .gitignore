@@ -1,0 +1,11 @@
+# Dependencies & Cache
+node_modules/
+.DS_Store
+Thumbs.db
+*.tmp
+__pycache__/
+*.pyc
+
+# IDE & Editor files
+.vscode/
+.idea/

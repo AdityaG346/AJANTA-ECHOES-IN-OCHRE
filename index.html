@@ -2,43 +2,574 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=ajanta-echoes-in-ochre/index.html">
-  <title>Ajanta: Echoes in Ochre</title>
-  <style>
-    body {
-      background: #17130F;
-      color: #E6D2AD;
-      font-family: sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      text-align: center;
-    }
-    a {
-      color: #C99A43;
-      text-decoration: none;
-      font-weight: bold;
-      border: 1px solid #C99A43;
-      padding: 12px 24px;
-      border-radius: 4px;
-      margin-top: 16px;
-      display: inline-block;
-    }
-    a:hover {
-      background: #A84F32;
-      color: #FFF;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajanta: Echoes in Ochre — The Living Murals of Ajanta</title>
+  <meta name="description" content="A digital heritage exhibition and five-scene visual retelling of the Matri-Poshaka Jataka, inspired by the ancient Buddhist murals of the Ajanta Caves.">
+  <meta name="theme-color" content="#17130F">
+
+  <!-- Google Fonts: Cormorant Garamond & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body>
-  <h1>Ajanta: Echoes in Ochre</h1>
-  <p>Loading the digital museum exhibition...</p>
-  <a href="ajanta-echoes-in-ochre/index.html">Enter Exhibition &rarr;</a>
-  <script>
-    window.location.href = "ajanta-echoes-in-ochre/index.html";
-  </script>
+<body class="theme-cave">
+  <!-- Accessibility: Skip to Content -->
+  <a href="#main" class="skip-to-content">Skip to content</a>
+
+  <!-- Persistent Header with Translucent Plaster Tint -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner container">
+      <a href="#hero" class="brand-link" aria-label="Ajanta: Echoes in Ochre Home">
+        <span class="brand-title">AJANTA</span>
+        <span class="brand-sub">ECHOES IN OCHRE</span>
+      </a>
+
+      <!-- Current Scene Indicator for Desktop Header -->
+      <div class="header-scene-indicator" id="header-scene-indicator" aria-hidden="true">
+        <span class="scene-dot"></span>
+        <span class="scene-indicator-text" id="header-scene-text">OVERVIEW</span>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav class="primary-nav" id="primary-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#story" class="nav-link">Story</a></li>
+          <li class="nav-item"><a href="#ajanta" class="nav-link">Ajanta</a></li>
+          <li class="nav-item"><a href="#reimagined" class="nav-link">Reimagined</a></li>
+          <li class="nav-item"><a href="#sources" class="nav-link">Sources</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content Landmark -->
+  <main id="main">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section" aria-labelledby="hero-heading">
+      <div class="container hero-container">
+        <!-- Hero Editorial Copy (Safe Left Column) -->
+        <div class="hero-content">
+          <div class="eyebrow hero-eyebrow">A JATAKA TALE · REIMAGINED</div>
+          <h1 id="hero-heading" class="hero-title">A Story Painted in Time</h1>
+          <p class="hero-subtitle">An ancient tale of compassion, told anew.</p>
+          
+          <div class="hero-actions">
+            <a href="#story" class="btn btn-primary" id="cta-enter-mural">
+              <span>Enter the mural</span>
+              <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 5v14M19 12l-7 7-7-7"/>
+              </svg>
+            </a>
+          </div>
+
+          <p class="hero-microcopy">FIVE SCENES. ONE ENDURING LESSON.</p>
+        </div>
+
+        <!-- Hero Museum Feature Frame (Verified 5th-century Ajanta Cave 17 Mural) -->
+        <div class="hero-artwork-frame">
+          <figure class="artwork-wrapper hero-artwork">
+            <img 
+              src="assets/images/ajanta-hero.webp" 
+              alt="Surviving rock-cut mural painting from Cave 17 at Ajanta depicting narrative Jataka scenes with mineral ochre and umber pigments" 
+              width="617" 
+              height="719" 
+              fetchpriority="high"
+              class="artwork-img">
+            <figcaption class="artwork-caption">
+              <span class="badge badge-historical">Historical Work</span>
+              <span class="caption-text">Murals depicting Jataka narratives in Cave 17, Ajanta (5th century CE).</span>
+              <a href="#sources" class="caption-link" aria-label="View source credit for Cave 17 Jataka mural">Credit & Provenance &rarr;</a>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT AJANTA SECTION -->
+    <section id="ajanta" class="ajanta-section section-spacer" aria-labelledby="ajanta-heading">
+      <div class="container">
+        <header class="section-header">
+          <div class="eyebrow">THE ART OF MEMORY</div>
+          <h2 id="ajanta-heading" class="section-title">Where walls remember stories</h2>
+        </header>
+
+        <div class="ajanta-grid">
+          <div class="ajanta-text-column">
+            <p class="lead-text">
+              Carved into the rock of western India, the Ajanta caves preserve an extraordinary tradition of Buddhist art. Their murals do more than decorate a space: they bring stories, values and imagined worlds to life. This digital storyboard takes inspiration from that narrative tradition and retells a Jataka tale through a modern visual lens.
+            </p>
+            <div class="context-note">
+              <p>
+                <strong>Chronological Note:</strong> Ajanta’s cave monuments and art developed across different periods, from approximately the second century BCE to the fifth–sixth century CE.
+              </p>
+            </div>
+            <div class="editorial-callout">
+              <h3 class="callout-heading">The Technique of Fresco-Secco</h3>
+              <p>
+                The master painters of Ajanta did not paint on wet plaster. Instead, they prepared the basalt volcanic rock with layers of ferruginous clay, rock-grit, straw, and cow dung, smoothed with fine lime wash (fresco-secco). On this receptive ground, they applied mineral pigments—yellow and red ochre, terra-verte green, lime white, carbon black, and imported lapis lazuli—creating expressive figures with sweeping calligraphic outlines.
+              </p>
+            </div>
+          </div>
+
+          <!-- Dual Curated Historical Feature Frames -->
+          <div class="ajanta-media-column">
+            <figure class="artwork-wrapper">
+              <img 
+                src="assets/images/ajanta-cave-context.webp" 
+                alt="Panoramic view of the basalt cliff horseshoe gorge of the Waghur River cradling the 30 rock-cut caves of Ajanta" 
+                width="1800" 
+                height="1200" 
+                loading="lazy" 
+                class="artwork-img">
+              <figcaption class="artwork-caption">
+                <span class="badge badge-historical">Site Photography</span>
+                <span class="caption-text">The horseshoe gorge of the Waghur River cradling the 30 rock-cut caves of Ajanta. UNESCO World Heritage Site.</span>
+                <span class="photographer-credit">Photo: Vyacheslav Argenberg / CC BY 4.0</span>
+              </figcaption>
+            </figure>
+
+            <figure class="artwork-wrapper secondary-frame">
+              <img 
+                src="assets/images/ajanta-mural-reference.webp" 
+                alt="Detail of a 5th-century royal court mural from the Vessantara Jataka in Cave 17, Ajanta" 
+                width="1800" 
+                height="1200" 
+                loading="lazy" 
+                class="artwork-img">
+              <figcaption class="artwork-caption">
+                <span class="badge badge-historical">Cave 17 Mural</span>
+                <span class="caption-text">Narrative court scene from the Vessantara Jataka, Cave 17, Ajanta (5th century CE).</span>
+                <span class="photographer-credit">Photo: Jean-Pierre Dalbéra / CC BY 2.0</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY INTRO & FIVE SCENES -->
+    <section id="story" class="story-section section-spacer" aria-labelledby="story-heading">
+      <div class="container">
+        <header class="section-header story-intro-header">
+          <div class="eyebrow">THE STORY</div>
+          <h2 id="story-heading" class="section-title">The elephant who remembered kindness</h2>
+          <p class="story-lead">
+            A white elephant cares for his blind parents, helps a stranger, faces betrayal, and finds his way home. Follow the story through five painted moments.
+          </p>
+
+          <!-- Interactive Dynamic Story Progress Bar -->
+          <div class="story-progress-indicator" aria-live="polite">
+            <div class="progress-meta">
+              <span class="progress-label" id="current-scene-label">SCENE 01 / 05</span>
+              <span class="progress-scene-title" id="current-scene-name">A quiet promise</span>
+            </div>
+            <div class="progress-track" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" aria-label="Story narrative reading progress">
+              <div class="progress-fill" id="story-progress-bar" style="width: 20%;"></div>
+            </div>
+          </div>
+        </header>
+
+        <!-- NARRATIVE SCENE 01 -->
+        <article id="scene-1" class="story-scene" data-scene="1" data-title="A quiet promise">
+          <div class="scene-grid">
+            <div class="scene-media">
+              <figure class="artwork-wrapper">
+                <img 
+                  src="assets/illustrations/scene-01-forest.svg" 
+                  alt="Mural-style illustration: A noble white elephant gently offering lotus shoots and foliage to his two elderly blind parents resting beneath an ancient bent Sal tree" 
+                  width="1200" 
+                  height="800" 
+                  loading="lazy" 
+                  class="artwork-img illustration-img">
+                <figcaption class="artwork-caption">
+                  <span class="badge badge-interpretation">Modern Interpretation</span>
+                  <span class="caption-text">Scene 1: Filial devotion in the undisturbed deep forest.</span>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="scene-text-content">
+              <div class="scene-number-label">01 / THE FOREST</div>
+              <h3 class="scene-title">A quiet promise</h3>
+              <blockquote class="scene-caption-quote">
+                “In the deep forest, a white elephant cared for the two who had once cared for him.”
+              </blockquote>
+              <p class="scene-body">
+                Away from the noise of the world, the elephant gathered food and stayed close to his blind parents. His strength was measured not by power, but by the care he gave.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- NARRATIVE SCENE 02 -->
+        <article id="scene-2" class="story-scene scene-reversed" data-scene="2" data-title="A stranger on the path">
+          <div class="scene-grid">
+            <div class="scene-media">
+              <figure class="artwork-wrapper">
+                <img 
+                  src="assets/illustrations/scene-02-stranger.svg" 
+                  alt="Mural-style illustration: The benevolent white elephant pointing his trunk along a mountain path to guide a lost traveller who folds his hands in gratitude" 
+                  width="1200" 
+                  height="800" 
+                  loading="lazy" 
+                  class="artwork-img illustration-img">
+                <figcaption class="artwork-caption">
+                  <span class="badge badge-interpretation">Modern Interpretation</span>
+                  <span class="caption-text">Scene 2: Compassion shown to a lost wanderer.</span>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="scene-text-content">
+              <div class="scene-number-label">02 / AN ACT OF KINDNESS</div>
+              <h3 class="scene-title">A stranger on the path</h3>
+              <blockquote class="scene-caption-quote">
+                “When a stranger lost his way, compassion asked for no reward.”
+              </blockquote>
+              <p class="scene-body">
+                The elephant found a traveller who could not find his way through the forest. Rather than turn away, he helped the stranger reach safety.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- NARRATIVE SCENE 03 -->
+        <article id="scene-3" class="story-scene scene-darkened" data-scene="3" data-title="Trust betrayed">
+          <div class="scene-grid">
+            <div class="scene-media">
+              <figure class="artwork-wrapper">
+                <img 
+                  src="assets/illustrations/scene-03-betrayal.svg" 
+                  alt="Mural-style illustration: The traveller pointing out the elephant's sanctuary to royal attendants with ropes, as the noble elephant is led away in sorrow" 
+                  width="1200" 
+                  height="800" 
+                  loading="lazy" 
+                  class="artwork-img illustration-img">
+                <figcaption class="artwork-caption">
+                  <span class="badge badge-interpretation">Modern Interpretation</span>
+                  <span class="caption-text">Scene 3: Betrayal and captivity in the shadowed grove.</span>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="scene-text-content">
+              <div class="scene-number-label">03 / THE TURNING POINT</div>
+              <h3 class="scene-title">Trust betrayed</h3>
+              <blockquote class="scene-caption-quote">
+                “The kindness he gave freely was repaid with betrayal.”
+              </blockquote>
+              <p class="scene-body">
+                The traveller later revealed where the elephant lived. The forest that had felt safe now became a place of loss, as the elephant was taken away.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- NARRATIVE SCENE 04 -->
+        <article id="scene-4" class="story-scene scene-reversed" data-scene="4" data-title="A silent answer">
+          <div class="scene-grid">
+            <div class="scene-media">
+              <figure class="artwork-wrapper">
+                <img 
+                  src="assets/illustrations/scene-04-palace.svg" 
+                  alt="Mural-style illustration: Royal palace courtyard with untouched golden platters of sugarcane and sweet fruits; the fasting white elephant refuses food while the thoughtful king listens with empathy" 
+                  width="1200" 
+                  height="800" 
+                  loading="lazy" 
+                  class="artwork-img illustration-img">
+                <figcaption class="artwork-caption">
+                  <span class="badge badge-interpretation">Modern Interpretation</span>
+                  <span class="caption-text">Scene 4: Grief, fasting, and the king's awakening.</span>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="scene-text-content">
+              <div class="scene-number-label">04 / THE REALISATION</div>
+              <h3 class="scene-title">A silent answer</h3>
+              <blockquote class="scene-caption-quote">
+                “No feast could comfort a heart separated from the ones it loved.”
+              </blockquote>
+              <p class="scene-body">
+                In the royal setting, food and comfort could not ease the elephant’s sorrow. The king noticed that something was wrong and learned why the elephant would not eat.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- NARRATIVE SCENE 05 -->
+        <article id="scene-5" class="story-scene scene-warm" data-scene="5" data-title="The way home">
+          <div class="scene-grid">
+            <div class="scene-media">
+              <figure class="artwork-wrapper">
+                <img 
+                  src="assets/illustrations/scene-05-return.svg" 
+                  alt="Mural-style illustration: Warm golden dawn light beneath the recurring bent Sal tree; joyous filial reunion with entwined trunks between the white elephant and his blind parents" 
+                  width="1200" 
+                  height="800" 
+                  loading="lazy" 
+                  class="artwork-img illustration-img">
+                <figcaption class="artwork-caption">
+                  <span class="badge badge-interpretation">Modern Interpretation</span>
+                  <span class="caption-text">Scene 5: Freedom, homecoming, and the enduring bond of love.</span>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="scene-text-content">
+              <div class="scene-number-label">05 / THE RETURN</div>
+              <h3 class="scene-title">The way home</h3>
+              <blockquote class="scene-caption-quote">
+                “The greatest gift was not a kingdom, but the freedom to return.”
+              </blockquote>
+              <p class="scene-body">
+                Moved by the elephant’s devotion to his parents, the king allowed him to return. Back beneath the familiar forest tree, the elephant was reunited with the ones he had never stopped loving.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- REFLECTION SECTION -->
+    <section id="reimagined" class="reflection-section section-spacer" aria-labelledby="reflection-heading">
+      <div class="container">
+        <header class="section-header">
+          <div class="eyebrow">THE STORY, TODAY</div>
+          <h2 id="reflection-heading" class="section-title">An old story. A living lesson.</h2>
+          <p class="lead-text reflection-lead">
+            Compassion is more than a feeling; it is a choice expressed through action. The elephant’s story asks us to consider how we treat those who depend on us, how we respond to betrayal, and whether we are willing to listen before judging.
+          </p>
+        </header>
+
+        <!-- Three Core Philosophical Values -->
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon-wrap" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+              </svg>
+            </div>
+            <h3 class="value-title">Care</h3>
+            <p class="value-desc">Strength can be expressed through patience and responsibility.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon-wrap" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="m4.93 4.93 4.24 4.24"/>
+                <path d="m14.83 9.17 4.24-4.24"/>
+                <path d="m14.83 14.83 4.24 4.24"/>
+                <path d="m9.17 14.83-4.24 4.24"/>
+                <circle cx="12" cy="12" r="4"/>
+              </svg>
+            </div>
+            <h3 class="value-title">Gratitude</h3>
+            <p class="value-desc">Kindness should not be treated as something to exploit.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon-wrap" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/>
+              </svg>
+            </div>
+            <h3 class="value-title">Listening</h3>
+            <p class="value-desc">Understanding another person’s story can change a decision.</p>
+          </div>
+        </div>
+
+        <p class="reflection-tagline">Contemporary interpretation of the story’s themes.</p>
+
+        <!-- Source / Interpretation Disclaimer -->
+        <div class="disclaimer-banner">
+          <h3 class="disclaimer-title">Source story, new telling</h3>
+          <p class="disclaimer-body">
+            This website is a modern visual interpretation inspired by the Matri-Poshaka Jataka and the mural tradition of Ajanta. The artwork created for this website is illustrative, not a claim to reproduce an authentic historical panel. Captions and reflective text are contemporary adaptations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOURCES & HERITAGE PROVENANCE SECTION -->
+    <section id="sources" class="sources-section section-spacer" aria-labelledby="sources-heading">
+      <div class="container">
+        <header class="section-header">
+          <div class="eyebrow">PROVENANCE & ARCHIVES</div>
+          <h2 id="sources-heading" class="section-title">Look closer</h2>
+          <p class="lead-text">
+            Explore the heritage references and image credits behind this retelling.
+          </p>
+        </header>
+
+        <!-- Historical vs Stylistic Iconography Notice -->
+        <div class="iconography-notice-card">
+          <div class="notice-image">
+            <img 
+              src="assets/images/ajanta-elephant-iconography.webp" 
+              alt="5th-century Ajanta Cave 17 elephant depiction from the Chaddanta Jataka" 
+              width="1024" 
+              height="1024" 
+              loading="lazy" 
+              class="notice-thumb">
+          </div>
+          <div class="notice-content">
+            <span class="badge badge-historical">Stylistic Reference Only</span>
+            <h3 class="notice-heading">Ajanta Elephant Iconography</h3>
+            <p>
+              <strong>Critical Historical Clarification:</strong> The painting shown above from Cave 17 illustrates the <em>Chaddanta Jataka</em>—a separate ancient narrative involving the six-tusked elephant king. In accordance with historical accuracy, it is presented here solely to document the 5th-century Ajanta style of portraying elephants (naturalistic anatomical weight, gentle eye curvature, ceremonial garlands), and is <strong>never</strong> conflated with the <em>Matri-Poshaka Jataka</em> scenes.
+            </p>
+            <p class="credit-line">
+              Photo: SpeakingArch · CC BY-SA 4.0 · ASI / Ajanta Cave 17
+            </p>
+          </div>
+        </div>
+
+        <!-- Verified Asset Records Table / Catalog -->
+        <div class="sources-catalog">
+          <div class="source-card">
+            <div class="source-card-header">
+              <span class="badge badge-historical">Historical Mural</span>
+              <h4 class="source-title">Cave 17 Jataka Narratives</h4>
+            </div>
+            <ul class="source-meta-list">
+              <li><strong>Asset:</strong> <code>assets/images/ajanta-hero.webp</code></li>
+              <li><strong>Subject:</strong> 5th-century CE rock-cut mural in Cave 17</li>
+              <li><strong>Photographer:</strong> Udayanga23 (Wikimedia Commons)</li>
+              <li><strong>License:</strong> Creative Commons CC0 1.0 (Public Domain Dedication)</li>
+              <li><strong>Holding:</strong> Archaeological Survey of India (ASI)</li>
+            </ul>
+            <a href="https://commons.wikimedia.org/wiki/File:Ajanta_murals_depicting_Jatakas_in_Cave_17.jpg" target="_blank" rel="noopener noreferrer" class="source-link">
+              <span>View Source Page</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+            </a>
+          </div>
+
+          <div class="source-card">
+            <div class="source-card-header">
+              <span class="badge badge-historical">Site Overview</span>
+              <h4 class="source-title">Ajanta Horseshoe Gorge Panorama</h4>
+            </div>
+            <ul class="source-meta-list">
+              <li><strong>Asset:</strong> <code>assets/images/ajanta-cave-context.webp</code></li>
+              <li><strong>Subject:</strong> Waghur River Gorge & basalt rock cliffs</li>
+              <li><strong>Photographer:</strong> Vyacheslav Argenberg</li>
+              <li><strong>License:</strong> Creative Commons Attribution 4.0 (CC BY 4.0)</li>
+              <li><strong>Holding:</strong> UNESCO World Heritage Site #242</li>
+            </ul>
+            <a href="https://commons.wikimedia.org/wiki/File:Ajanta_Caves,_India,_Panoramic_view_of_Ajanta_basalt_cliffs_and_caves.jpg" target="_blank" rel="noopener noreferrer" class="source-link">
+              <span>View Source Page</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+            </a>
+          </div>
+
+          <div class="source-card">
+            <div class="source-card-header">
+              <span class="badge badge-historical">Historical Detail</span>
+              <h4 class="source-title">Vessantara Jataka Court Scene</h4>
+            </div>
+            <ul class="source-meta-list">
+              <li><strong>Asset:</strong> <code>assets/images/ajanta-mural-reference.webp</code></li>
+              <li><strong>Subject:</strong> Royal pavilion and figures in Cave 17</li>
+              <li><strong>Photographer:</strong> Jean-Pierre Dalbéra (Paris, France)</li>
+              <li><strong>License:</strong> Creative Commons Attribution 2.0 (CC BY 2.0)</li>
+              <li><strong>Holding:</strong> ASI / Ajanta Caves</li>
+            </ul>
+            <a href="https://commons.wikimedia.org/wiki/File:Ajanta_Cave_17_Scene_of_the_Vessantara_Jataka.jpg" target="_blank" rel="noopener noreferrer" class="source-link">
+              <span>View Source Page</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+            </a>
+          </div>
+
+          <div class="source-card">
+            <div class="source-card-header">
+              <span class="badge badge-interpretation">Story Illustrations</span>
+              <h4 class="source-title">Matri-Poshaka Jataka Suite</h4>
+            </div>
+            <ul class="source-meta-list">
+              <li><strong>Assets:</strong> <code>assets/illustrations/scene-01</code> to <code>05.svg</code></li>
+              <li><strong>Style:</strong> Gupta-Vakataka Ajanta mineral pigments & line</li>
+              <li><strong>Art Direction:</strong> Museum Editorial Heritage Guidelines</li>
+              <li><strong>License:</strong> Educational Project Original Artwork</li>
+              <li><strong>Documentation:</strong> Detailed in <code>SOURCES_AND_CREDITS.md</code></li>
+            </ul>
+            <a href="SOURCES_AND_CREDITS.md" class="source-link">
+              <span>Read Full Credit Schema</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-title">AJANTA: ECHOES IN OCHRE</span>
+          <span class="footer-descriptor">The Living Murals of Ajanta</span>
+          <p class="footer-statement">
+            Ancient stories. Timeless lessons. Reimagined.
+          </p>
+        </div>
+
+        <div class="footer-nav">
+          <h4 class="footer-heading">Exhibition</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Overview</a></li>
+            <li><a href="#ajanta">About Ajanta</a></li>
+            <li><a href="#story">The Five Scenes</a></li>
+            <li><a href="#reimagined">Contemporary Reflection</a></li>
+            <li><a href="#sources">Sources & Provenance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-academic">
+          <h4 class="footer-heading">Academic Project</h4>
+          <p class="footer-meta">
+            Created by Heritage Arts Studio · College Storyboard Exhibition · 2026
+          </p>
+          <p class="footer-subtext">
+            Built with semantic HTML5, CSS3, vanilla JavaScript & GSAP 3.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; 2026 Ajanta: Echoes in Ochre. Educational heritage exhibition.
+        </p>
+        <a href="#hero" class="back-to-top" id="back-to-top" aria-label="Back to top of page">
+          <span>Back to top</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m18 15-6-6-6 6"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP & ScrollTrigger Vendor Scripts -->
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+
+  <!-- ES Modules -->
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

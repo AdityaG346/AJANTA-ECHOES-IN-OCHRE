@@ -1,0 +1,226 @@
+/* ==========================================================================
+   AJANTA: ECHOES IN OCHRE — RESPONSIVE ADAPTATIONS
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Desktop Display Indicators & Refinements (992px+)
+   -------------------------------------------------------------------------- */
+@media (min-width: 992px) {
+  .header-scene-indicator {
+    display: inline-flex;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Medium Screens (Tablets / Compact Laptops: <= 991px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  :root {
+    --header-height: 68px;
+    --space-section: clamp(64px, 8vw, 100px);
+  }
+
+  /* Header & Mobile Menu Drawer */
+  .menu-toggle {
+    display: block;
+    z-index: 1001;
+  }
+
+  .primary-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(320px, 85vw);
+    height: 100vh;
+    background-color: rgba(16, 13, 10, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-left: 1px solid var(--line);
+    padding: calc(var(--header-height) + 30px) 30px 40px;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+    z-index: 999;
+  }
+
+  .primary-nav.is-open {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  /* Animated Hamburger to X */
+  .menu-toggle[aria-expanded="true"] .menu-bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .menu-toggle[aria-expanded="true"] .menu-bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle[aria-expanded="true"] .menu-bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  .primary-nav .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .nav-link {
+    font-size: 1.15rem;
+    padding-block: 8px;
+    display: block;
+    width: 100%;
+  }
+
+  /* Hero Section Stacking */
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-content {
+    order: 1;
+  }
+
+  .hero-artwork-frame {
+    order: 2;
+    max-width: 580px;
+    margin-inline: auto;
+  }
+
+  /* About Ajanta Stacking */
+  .ajanta-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .ajanta-media-column {
+    max-width: 720px;
+  }
+
+  /* Story Scenes: Stacked image first */
+  .scene-grid,
+  .story-scene.scene-reversed .scene-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .story-scene .scene-media,
+  .story-scene.scene-reversed .scene-media {
+    order: 1;
+  }
+
+  .story-scene .scene-text-content,
+  .story-scene.scene-reversed .scene-text-content {
+    order: 2;
+  }
+
+  /* Reflection Values */
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Iconography Notice */
+  .iconography-notice-card {
+    grid-template-columns: 180px 1fr;
+    gap: 20px;
+  }
+
+  /* Footer Layout */
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .footer-brand {
+    grid-column: span 2;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Small Mobile Screens (<= 599px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 599px) {
+  :root {
+    --header-height: 64px;
+  }
+
+  .container {
+    width: calc(100% - 32px);
+  }
+
+  .hero-title {
+    font-size: clamp(2.75rem, 11vw, 3.75rem);
+  }
+
+  .hero-subtitle {
+    font-size: 1.35rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .section-title {
+    font-size: clamp(2.15rem, 8.5vw, 2.75rem);
+  }
+
+  .scene-title {
+    font-size: clamp(1.85rem, 7.5vw, 2.45rem);
+  }
+
+  .scene-caption-quote {
+    font-size: 1.15rem;
+    padding-left: 14px;
+  }
+
+  .iconography-notice-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .notice-image {
+    max-width: 200px;
+  }
+
+  .sources-catalog {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-brand {
+    grid-column: span 1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Accessibility & High Zoom Support (200% zoom)
+   -------------------------------------------------------------------------- */
+@media (max-height: 550px) {
+  .primary-nav {
+    overflow-y: auto;
+  }
+}
