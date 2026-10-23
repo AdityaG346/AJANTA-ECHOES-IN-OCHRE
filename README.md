@@ -113,10 +113,7 @@ Because the project uses ES Modules (`<script type="module">`), modern browsers 
 ### Method 1: Python (Recommended)
 Open a terminal in the project directory:
 ```bash
-# Navigate to the folder
-cd "ajanta-echoes-in-ochre"
-
-# Launch local HTTP server
+# Launch local HTTP server from repository root
 python -m http.server 5500
 ```
 Open your browser and navigate to:
@@ -126,7 +123,6 @@ http://localhost:5500
 
 ### Method 2: Node.js (npx)
 ```bash
-cd "ajanta-echoes-in-ochre"
 npx -y serve .
 ```
 
@@ -137,9 +133,10 @@ Right-click on `index.html` inside VS Code / Antigravity and select **"Open with
 
 ## 🌐 Static Deployment
 
-The project has zero server dependencies and can be deployed directly to any static web host:
-- **GitHub Pages:** Push the repository to GitHub, go to **Settings > Pages**, choose the branch and root folder, and save.
-- **Netlify / Vercel:** Drag and drop the `ajanta-echoes-in-ochre` folder into the Netlify dashboard or link the Git repository.
+The project has zero server dependencies, no build step, and is structured for zero-configuration static hosting directly from the repository root:
+- **Vercel:** Import the GitHub repository (`AdityaG346/AJANTA-ECHOES-IN-OCHRE`). Keep the Root Directory as `./` (default), Framework Preset as "Other", and deploy.
+- **GitHub Pages:** Push the repository to GitHub, go to **Settings > Pages**, choose `main` branch and `/ (root)` folder, and save.
+- **Netlify:** Link the Git repository with default settings.
 
 ---
 
