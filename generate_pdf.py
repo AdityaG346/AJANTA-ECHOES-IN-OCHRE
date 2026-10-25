@@ -36,15 +36,11 @@ class NumberedCanvas(canvas.Canvas):
         self.setFont("Times-Roman", 9)
         self.setFillColor(colors.HexColor("#222222"))
 
-        # Top running header
+        # Bottom running footer
         self.setLineWidth(0.5)
         self.setStrokeColor(colors.HexColor("#777777"))
-        self.line(54, 841.89 - 40, 595.27 - 54, 841.89 - 40)
-        self.drawString(54, 841.89 - 34, "Ajanta: Echoes in Ochre — Academic Project Documentation")
-
-        # Bottom running footer
         self.line(54, 46, 595.27 - 54, 46)
-        self.drawString(54, 33, "Department of Computer Science & Engineering | Web Technologies Coursework")
+        self.drawString(54, 33, "Department of Computing Technologies | Indian Art Form Coursework")
         page_str = f"Page {self._pageNumber} of {total_pages}"
         self.drawRightString(595.27 - 54, 33, page_str)
         self.restoreState()
@@ -166,7 +162,7 @@ def build_pdf(filename):
     # 1. Title Block
     story.append(Paragraph("Ajanta: Echoes in Ochre — The Living Murals of Ajanta", title_style))
     story.append(Paragraph("An Interactive Digital Storytelling Website Inspired by the Ajanta Cave Paintings", subtitle_style))
-    story.append(Paragraph("Course Project: Interactive Media & Web Engineering | Live Website: <a href=\"https://ajanta-echoes-in-ochre.vercel.app/\" color=\"#003399\"><u>https://ajanta-echoes-in-ochre.vercel.app/</u></a>", meta_style))
+    story.append(Paragraph("Course Project: Indian Art Form | Live Website: <a href=\"https://ajanta-echoes-in-ochre.vercel.app/\" color=\"#003399\"><u>https://ajanta-echoes-in-ochre.vercel.app/</u></a>", meta_style))
     story.append(HRFlowable(width="100%", thickness=0.75, color=colors.HexColor("#444444"), spaceBefore=0, spaceAfter=5))
 
     # 2. Project Overview
